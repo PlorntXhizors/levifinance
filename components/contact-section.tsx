@@ -5,23 +5,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import * as z from "zod"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Phone, Mail, MessageCircle, MapPin } from "lucide-react"
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: "השם חייב להכיל לפחות 2 תווים" }),
-  phone: z.string().min(9, { message: "מספר טלפון לא תקין" }),
-  email: z.string().email({ message: "כתובת אימייל לא תקינה" }),
-  service: z.string().min(1, { message: "יש לבחור תחום" }),
-  message: z.string().optional(),
-})
-
 export default function ContactSection() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm({
     defaultValues: {
       name: "",
       phone: "",
@@ -31,7 +20,25 @@ export default function ContactSection() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: any) {
+    // Basic validation
+    if (!values.name || values.name.length < 2) {
+      alert("השם חייב להכיל לפחות 2 תווים")
+      return
+    }
+    if (!values.phone || values.phone.length < 9) {
+      alert("מספר טלפון לא תקין")
+      return
+    }
+    if (!values.email || !values.email.includes("@")) {
+      alert("כתובת אימייל לא תקינה")
+      return
+    }
+    if (!values.service) {
+      alert("יש לבחור תחום")
+      return
+    }
+
     console.log(values)
     // Here you would normally send the form data to your backend
     alert("הפרטים נשלחו בהצלחה! נחזור אליך בהקדם.")
