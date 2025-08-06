@@ -27,7 +27,7 @@ export default function Team() {
     },
     {
       name: "לין לוי",
-      title: "שותפה ויועצת משפטית",
+      title: "מייסדת ומנכלית",
       description: 'יועצת משכנתאות וכלכלנית עם נסיון עשיר בתחום וגם בליווי פרויקטים נדל"ן.',
       image: "/placeholder.svg?height=300&width=300&text=לין+לוי",
       email: "lin.levi@beitlevi.co.il",

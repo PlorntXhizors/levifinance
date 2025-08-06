@@ -69,7 +69,7 @@ export default function MortgageLawPage() {
               <h2 className="text-2xl font-bold text-navy mt-8 mb-4">השינויים העיקריים</h2>
 
               <h3 className="text-xl font-bold text-navy mb-3">1. בדיקת כושר אשראי מחמירה</h3>
-              <p>הבנקים נדרשים כעת לבצע בדיקות יסודיות יותר של יכולת ההחזר של הלווים. הבדיקה כוללת:</p>
+              <p>הבנקים נדרשים כעת לבצע בדיקות ��סודיות יותר של יכולת ההחזר של הלווים. הבדיקה כוללת:</p>
               <ul className="list-disc mr-6 space-y-2">
                 <li>ניתוח מעמיק של הכנסות והוצאות במשך 6 חודשים אחרונים</li>
                 <li>בדיקת יציבות מקור ההכנסה</li>
