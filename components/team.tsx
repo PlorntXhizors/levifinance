@@ -7,7 +7,7 @@ export default function Team() {
   const teamMembers = [
     {
       name: "נופר לוי",
-      title: "מייסדת ומנכל״ית",
+      title: "שותפה ויועצת משפטית",
       description: 'בעלת תואר ראשון במשפטים, תואר שני במשפטים, תואר שני במנהל עסקים שמאות מקרקעין וניהול נדל"ן',
       image: "/placeholder.svg?height=300&width=300&text=נופר+לוי",
       email: "nofarlevi2603@gmail.com",
