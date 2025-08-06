@@ -1,13 +1,13 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Mail, Phone, GraduationCap } from "lucide-react"
+import { Mail, Phone, GraduationCap } from 'lucide-react'
 import Image from "next/image"
 
 export default function Team() {
   const teamMembers = [
     {
       name: "נופר לוי",
-      title: 'מייסדת ומנכל"ית',
+      title: "מייסדת ומנכל״ית",
       description: 'בעלת תואר ראשון במשפטים, תואר שני במשפטים, תואר שני במנהל עסקים שמאות מקרקעין וניהול נדל"ן',
       image: "/placeholder.svg?height=300&width=300&text=נופר+לוי",
       email: "nofarlevi2603@gmail.com",
@@ -66,7 +66,7 @@ export default function Team() {
               <CardContent>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-navy mb-2 flex items-center gap-2">
+                    <h4 className="font-semibold text-navy mb-1 flex items-center gap-2">
                       <GraduationCap className="h-4 w-4" />
                       התמחויות
                     </h4>
