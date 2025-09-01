@@ -13,7 +13,7 @@ const notoSansHebrew = Noto_Sans_Hebrew({
 export const metadata: Metadata = {
   title: "בית לוי שמאות ופיננסים",
   description: "אמינות. מקצועיות. ליווי אישי – כל פתרונות הנדל״ן, המשכנתאות והשמאות תחת קורת גג אחת.",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Calculator, Home, ScaleIcon as Scales, LineChart, ArrowRight } from "lucide-react"
+import { Calculator, Home, Scale as Scales, ArrowRight, Building } from "lucide-react"
 import Link from "next/link"
 
 export default function Services() {
@@ -22,16 +22,16 @@ export default function Services() {
     {
       title: "ליווי משפטי בעסקאות נדל״ן",
       description:
-        "רוכשים או מוכרים די��ה? בעסקה עם יזם? אנחנו נדאג לכל ההיבטים המשפטיים – חוזים, בדיקות, רישום, מיסוי ועוד.",
+        "רוכשים או מוכרים דיה? בעסקה עם יזם? אנחנו נדאג לכל ההיבטים המשפטיים – חוזים, בדיקות, רישום, מיסוי ועוד.",
       icon: Home,
       features: ["ניסוח ובדיקת הסכמי מכר", "טיפול בהיבטי מיסוי", "רישום בטאבו"],
     },
     {
-      title: "ליווי נכסי נדל״ן",
+      title: "תחדשות עירונית",
       description:
-        "מהשקעה בדירה ועד ניהול פרויקטים – אנו מציעים ליווי מקצועי למשקיעים, חברות ויזמים, כולל ניתוח כדאיות, בדיקות זכויות, תכנון וניהול.",
-      icon: LineChart,
-      features: ["ניתוחים כלכליים", "תכנון אסטרטגי", "בדיקות שמאיות מקדימות"],
+        "תחדשות עירונית היא תהליך של הריסה ובנייה מחדש של מבנים ישנים במטרה לשפר את איכות המגורים ולהגדיל את מספר היחידות. משרדנו מתמחה בליווי מלא של פרויקטי התחדשות עירונית - מהשלבים הראשונים ועד לקבלת הדירות החדשות.",
+      icon: Building,
+      features: ["ליווי פרויקטי תמ״א 38", "ייעוץ משפטי לפינוי-בינוי", "הערכת זכויות ושווי"],
     },
   ]
 
