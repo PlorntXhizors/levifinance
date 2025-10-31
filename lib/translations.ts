@@ -149,6 +149,74 @@ export const translations = {
       readMore: "קרא עוד",
       viewAll: "צפה בכל המאמרים",
       readTime: "דקות קריאה",
+      backToGuides: "חזרה למדריכים",
+      author: "נופר לוי",
+      categories: {
+        investment: "השקעות",
+        mortgage: "משכנתאות",
+        legal: "ליווי משפטי",
+        appraisal: "שמאות מקרקעין",
+      },
+      articles: {
+        1: {
+          title: "מדריך למשקיעים: איך לבחור נכס השקעה רווחי",
+          date: "15 בינואר 2025",
+          readTime: "5",
+          category: "investment",
+          imageAlt: "מדריך השקעה בנדל״ן",
+          intro:
+            "השקעה בנדל״ן נחשבת לאחת ההשקעות הבטוחות והרווחיות ביותר, אך בחירת הנכס הנכון דורשת ידע, תכנון ובדיקות מעمقות. במדריך זה נסקור את השלבים החשובים ביותר לבחירת נכס השקעה מוצלח.",
+          sections: {
+            location: {
+              title: "שלב 1: בחירת המיקום",
+              content:
+                "המיקום הוא הגורם החשוב ביותר בהשקעה בנדל״ן. חפשו אזורים עם פוטנציאל צמיחה, קרבה לתחבורה ציבורית, מוסדות חינוך איכותיים ומרכזי תעסוקה. אזורים בפיתוח או שכונות שעוברות התחדשות עירונית מציעים לרוב פוטנציאל עליית ערך גבוה.",
+              tip: "בדקו תוכניות פיתוח עתידיות באזור - פרויקטי תשתית, קווי רכבת קלה או מרכזי מסחר חדשים יכולים להעלות משמעותית את ערך הנכס.",
+            },
+            returns: {
+              title: "שלב 2: חישוב התשואה הצפויה",
+              content: "לפני רכישת נכס השקעה, חשוב לחשב את התשואה הצפויה. התשואה מורכבת משני מרכיבים עיקריים:",
+              items: ["תשואה שוטפת: הכנסה חודשית משכירות מול ההשקעה הכוללת", "תשואת הון: עליית ערך הנכס לאורך זמן"],
+              formula: "נוסחה בסיסית לחישוב תשואה שוטפת: (שכירות שנתית ÷ מחיר הנכס) × 100 = אחוז תשואה שנתית",
+            },
+            inspection: {
+              title: "שלב 3: בדיקת מצב הנכס והזכויות",
+              content: "לפני חתימה על הסכם, חיוני לבצע בדיקות יסודיות:",
+              items: [
+                "בדיקת מהנדס - מצב המבנה, מערכות החשמל והאינסטלציה",
+                "בדיקת זכויות בטאבו - וודאו שאין עיקולים או משכנתאות",
+                "בדיקת תוכניות בנייה - האם יש אפשרות להרחבה או שיפוץ",
+                "בדיקת ועד הבית - גובה האגרות והחובות הקיימים",
+              ],
+              reminder:
+                "השקעה בנדל״ן היא השקעה ארוכת טווח. התאזרו בסבלנות ואל תצפו לתשואות מיידיות. השוק הנדל״ן עובר מחזורים, והמפתח להצלחה הוא בחירה נכונה וסבלנות.",
+            },
+          },
+          summary:
+            "השקעה מוצלחת בנדל״ן דורשת מחקר יסודי, תכנון פיננסי נכון וליווי מקצועי. אנו ב״בית לוי״ מציעים ליווי מלא למשקיעים - מבדיקת הנכס ועד לסיום העסקה. צרו איתנו קשר לייעוץ אישי ומקצועי.",
+          cta: {
+            title: "מעוניינים בליווי מקצועי?",
+            description: "צוות המומחים שלנו יכול לסייע לכם בכל שלבי ההשקעה - מבחירת הנכס ועד לסיום העסקה.",
+            button: "צרו קשר לייעוץ",
+          },
+        },
+        2: {
+          title: "שינויים בחוק המשכנתאות 2025: מה חשוב לדעת",
+          date: "8 בינואר 2025",
+          readTime: "7",
+          category: "mortgage",
+          imageAlt: "שינויים בחוק המשכנתאות 2025",
+          // ... more content
+        },
+        3: {
+          title: "טעויות נפוצות בעסקאות נדל״ן ואיך להימנע מהן",
+          date: "2 בינואר 2025",
+          readTime: "6",
+          category: "legal",
+          imageAlt: "טעויות נפוצות בעסקאות נדל״ן",
+          // ... more content
+        },
+      },
     },
     // Contact
     contact: {
@@ -349,6 +417,80 @@ export const translations = {
       readMore: "Read More",
       viewAll: "View All Articles",
       readTime: "Minutes to Read",
+      backToGuides: "Back to Guides",
+      author: "Nofar Levi",
+      categories: {
+        investment: "Investments",
+        mortgage: "Mortgages",
+        legal: "Legal Guidance",
+        appraisal: "Property Valuations",
+      },
+      articles: {
+        1: {
+          title: "Investor's Guide: How to Choose a Profitable Investment Property",
+          date: "January 15, 2025",
+          readTime: "5",
+          category: "investment",
+          imageAlt: "Real Estate Investment Guide",
+          intro:
+            "Real estate investment is considered one of the safest and most profitable investments, but choosing the right property requires knowledge, planning, and thorough inspections. In this guide, we will review the most important steps for choosing a successful investment property.",
+          sections: {
+            location: {
+              title: "Step 1: Choosing the Location",
+              content:
+                "Location is the most important factor in real estate investment. Look for areas with growth potential, proximity to public transportation, quality educational institutions, and employment centers. Developing areas or neighborhoods undergoing urban renewal usually offer high value appreciation potential.",
+              tip: "Check future development plans in the area - infrastructure projects, light rail lines, or new shopping centers can significantly increase property value.",
+            },
+            returns: {
+              title: "Step 2: Calculating Expected Returns",
+              content:
+                "Before purchasing an investment property, it's important to calculate the expected return. The return consists of two main components:",
+              items: [
+                "Current yield: Monthly rental income versus total investment",
+                "Capital gain: Property value appreciation over time",
+              ],
+              formula:
+                "Basic formula for calculating current yield: (Annual rent ÷ Property price) × 100 = Annual yield percentage",
+            },
+            inspection: {
+              title: "Step 3: Inspecting Property Condition and Rights",
+              content: "Before signing an agreement, it's essential to conduct thorough inspections:",
+              items: [
+                "Engineer inspection - building condition, electrical and plumbing systems",
+                "Land Registry rights check - ensure there are no liens or mortgages",
+                "Building plans check - is there potential for expansion or renovation",
+                "Building committee check - fee amounts and existing debts",
+              ],
+              reminder:
+                "Real estate investment is a long-term investment. Be patient and don't expect immediate returns. The real estate market goes through cycles, and the key to success is making the right choice and being patient.",
+            },
+          },
+          summary:
+            "Successful real estate investment requires thorough research, proper financial planning, and professional guidance. At 'Levi House' we offer complete accompaniment for investors - from property inspection to transaction completion. Contact us for personal and professional advice.",
+          cta: {
+            title: "Interested in Professional Guidance?",
+            description:
+              "Our team of experts can assist you at all stages of investment - from property selection to transaction completion.",
+            button: "Contact for Advice",
+          },
+        },
+        2: {
+          title: "Changes in Mortgage Law 2025: What You Need to Know",
+          date: "January 8, 2025",
+          readTime: "7",
+          category: "mortgage",
+          imageAlt: "Changes in Mortgage Law 2025",
+          // ... more content
+        },
+        3: {
+          title: "Common Mistakes in Real Estate Transactions and How to Avoid Them",
+          date: "January 2, 2025",
+          readTime: "6",
+          category: "legal",
+          imageAlt: "Common Real Estate Transaction Mistakes",
+          // ... more content
+        },
+      },
     },
     // Contact
     contact: {
