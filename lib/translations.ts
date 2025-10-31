@@ -77,11 +77,19 @@ export const translations = {
           "מהשקעה בדירה ועד ניהול פרויקטים – אנו מציעים ליווי מקצועי למשקיעים, חברות ויזמים, כולל ניתוח וניהול נכסים.",
         features: ["ניהול נכסים"], // Removed the duplicate "serviceName": "ניהול נכסים"
       },
+      getAdvice: "קבל ייעוץ ראשוני",
+      scheduleBtn: "לתיאום פגישה",
+      urbanRenewal: {
+        title: "תחדשות עירונית",
+        description:
+          "משרדנו מתמחה בהתחדשות עירונית - ליווי מקצועי בפרויקטי תמ״א 38, פינוי-בינוי והתחדשות עירונית. אנו מספקים ייעוץ משפטי מקיף והערכת זכויות ושווי.",
+        features: ["ליווי פרויקטי תמ״א 38", "ייעוץ משפטי לפינוי-בינוי", "הערכת זכויות ושווי"],
+      },
     },
     // Team
     team: {
       title: "הצוות שלנו",
-      subtitle: "צוות מומחים מנוסה ומקצועי שמביא איתו שנים של ניסיון בתחומי הנדל״ן, המשפט והפיננסים",
+      subtitle: "צוות מומחים מנוסה ומקצועי שמביאaghetti את השנים של ניסיון בתחומי הנדל״ן, המשפט והפיננסים",
       specialties: "התמחויות",
       education: "השכלה",
       email: "אימייל",
@@ -243,30 +251,38 @@ export const translations = {
       mortgage: {
         title: "Mortgage Advice",
         description:
-          "Choosing the right mortgage can save you hundreds of thousands of shekels. We will build a smart mortgage for you, manage your mortgage with banks – and you will enjoy peace of mind in advance.",
-        features: ["Personalized mortgage plan", "Manage mortgage with banks", "Save tens of thousands of shekels"],
+          "Choosing the right mortgage can save you hundreds of thousands of shekels. We will build a smart mortgage for you, manage negotiations with banks – and you will enjoy peace of mind.",
+        features: ["Personalized mortgage plan", "Negotiate with banks", "Save tens of thousands of shekels"],
       },
       appraisal: {
         title: "Property Valuations",
         description:
           "Professional and precise property valuation report – the key to a safe transaction. With extensive experience and deep knowledge of the area, we are here to truly value your property.",
-        features: ["Trustworthy property valuations", "Legal opinion", "Rights checks and plans"],
+        features: ["Trustworthy property valuations", "Legal opinions", "Rights checks and plans"],
       },
       legal: {
         title: "Legal Accompaniment in Real Estate Transactions",
         description:
-          "Buying or selling a house? A transaction with a partnership? We will take care of all legal aspects – contracts, inspections, registration, taxes, and more.",
-        features: [
-          "Drafting and reviewing sales contracts",
-          "Handling tax issues",
-          "Registration in the Land Registry",
-        ],
+          "Buying or selling a house? A transaction with a developer? We will take care of all legal aspects – contracts, inspections, registration, taxes, and more.",
+        features: ["Drafting and reviewing sales contracts", "Handling tax issues", "Land Registry registration"],
       },
       management: {
         title: "Real Estate Asset Management",
         description:
           "From investing in a house to managing projects – we offer professional accompaniment to investors, companies, and partnerships, including property analysis and management.",
         features: ["Property management"], // Removed the duplicate "serviceName": "Property management"
+      },
+      getAdvice: "Get Initial Advice",
+      scheduleBtn: "Schedule a Meeting",
+      urbanRenewal: {
+        title: "Urban Renewal",
+        description:
+          "Our office specializes in urban renewal - professional accompaniment in TAMA 38 projects, evacuation-construction, and urban renewal. We provide comprehensive legal advice and rights and value assessment.",
+        features: [
+          "TAMA 38 project accompaniment",
+          "Legal advice for evacuation-construction",
+          "Rights and value assessment",
+        ],
       },
     },
     // Team
