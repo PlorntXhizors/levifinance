@@ -6,6 +6,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { useState, useEffect } from "react"
 import { ThemeProvider } from "@/components/theme-provider"
+import { LanguageProvider } from "@/contexts/language-context"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -37,7 +38,7 @@ export default function ClientLayout({
       </head>
       <body className={className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
+          <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

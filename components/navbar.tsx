@@ -7,9 +7,12 @@ import { Menu, FileDown, Home, Users, Phone } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { useLanguage } from "@/contexts/language-context"
+import LanguageToggle from "@/components/language-toggle"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,19 +25,18 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll)
 
-    // Cleanup function to remove event listener
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
   const navLinks = [
-    { title: "דף הבית", href: "#home", icon: Home },
-    { title: "אודות", href: "#about", icon: Users },
-    { title: "הצוות שלנו", href: "#team", icon: Users },
-    { title: "השירותים שלנו", href: "#services", icon: FileDown },
-    { title: "המדריכים שלנו", href: "#blog", icon: FileDown },
-    { title: "צור קשר", href: "#contact", icon: Phone },
+    { title: t.nav.home, href: "#home", icon: Home },
+    { title: t.nav.about, href: "#about", icon: Users },
+    { title: t.nav.team, href: "#team", icon: Users },
+    { title: t.nav.services, href: "#services", icon: FileDown },
+    { title: t.nav.blog, href: "#blog", icon: FileDown },
+    { title: t.nav.contact, href: "#contact", icon: Phone },
   ]
 
   return (
@@ -72,16 +74,18 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4">
+          <LanguageToggle />
+
           <Button asChild className="hidden md:flex px-6 py-5 text-base font-semibold tracking-wide">
-            <Link href="#contact">תיאום פגישה</Link>
+            <Link href="#contact">{t.nav.schedule}</Link>
           </Button>
 
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden">
+              <Button variant="outline" size="icon" className="md:hidden bg-transparent">
                 <Menu className="h-5 w-5" />
-                <span className="sr-only">תפריט</span>
+                <span className="sr-only">{t.nav.menu}</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[380px]">
@@ -110,7 +114,7 @@ export default function Navbar() {
                 </nav>
 
                 <Button className="w-full">
-                  <Link href="#contact">תיאום פגישה</Link>
+                  <Link href="#contact">{t.nav.schedule}</Link>
                 </Button>
               </div>
             </SheetContent>
