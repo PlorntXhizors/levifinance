@@ -1,37 +1,38 @@
+"use client"
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calculator, Home, Scale as Scales, ArrowRight, Building } from "lucide-react"
 import Link from "next/link"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Services() {
+  const { t } = useLanguage()
+
   const services = [
     {
-      title: "ייעוץ משכנתאות",
-      description:
-        "בחירה נכונה במשכנתא יכולה לחסוך לכם מאות אלפי שקלים. אנחנו נבנה עבורכם תמהיל חכם, ננהל מו״מ עם הבנקים – ואתם תיהנו מראש שקט.",
+      title: t.services.mortgage.title,
+      description: t.services.mortgage.description,
       icon: Calculator,
-      features: ["תמהיל משכנתא מותאם אישית", "ניהול מו״מ עם הבנקים", "חיסכון של עשרות אלפי שקלים"],
+      features: t.services.mortgage.features,
     },
     {
-      title: "שמאות מקרקעין",
-      description:
-        "דו״ח שמאי מקצועי ומדויק – המפתח לעסקה בטוחה. עם ניסיון רב והיכרות עמוקה עם השטח, אנחנו כאן כדי להעריך את הנכס באמת.",
+      title: t.services.appraisal.title,
+      description: t.services.appraisal.description,
       icon: Scales,
-      features: ["הערכות שווי מהימנות", "חוות דעת לבית משפט", "בדיקות זכויות ותוכניות"],
+      features: t.services.appraisal.features,
     },
     {
-      title: "ליווי משפטי בעסקאות נדל״ן",
-      description:
-        "רוכשים או מוכרים דיה? בעסקה עם יזם? אנחנו נדאג לכל ההיבטים המשפטיים – חוזים, בדיקות, רישום, מיסוי ועוד.",
+      title: t.services.legal.title,
+      description: t.services.legal.description,
       icon: Home,
-      features: ["ניסוח ובדיקת הסכמי מכר", "טיפול בהיבטי מיסוי", "רישום בטאבו"],
+      features: t.services.legal.features,
     },
     {
-      title: "תחדשות עירונית",
-      description:
-        "תחדשות עירונית היא תהליך של הריסה ובנייה מחדש של מבנים ישנים במטרה לשפר את איכות המגורים ולהגדיל את מספר היחידות. משרדנו מתמחה בליווי מלא של פרויקטי התחדשות עירונית - מהשלבים הראשונים ועד לקבלת הדירות החדשות.",
+      title: t.services.urbanRenewal.title,
+      description: t.services.urbanRenewal.description,
       icon: Building,
-      features: ["ליווי פרויקטי תמ״א 38", "ייעוץ משפטי לפינוי-בינוי", "הערכת זכויות ושווי"],
+      features: t.services.urbanRenewal.features,
     },
   ]
 
@@ -39,8 +40,8 @@ export default function Services() {
     <section id="services" className="py-16 md:py-24 bg-gray-50">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">השירותים שלנו</h2>
-          <p className="text-lg text-muted-foreground">שירותים מקצועיים. תוצאה מדויקת.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">{t.services.title}</h2>
+          <p className="text-lg text-muted-foreground">{t.services.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -71,7 +72,7 @@ export default function Services() {
               <CardFooter>
                 <Button variant="ghost" className="w-full justify-between group" asChild>
                   <Link href="#contact">
-                    <span>קבל ייעוץ ראשוני</span>
+                    <span>{t.services.getAdvice}</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
@@ -82,7 +83,7 @@ export default function Services() {
 
         <div className="mt-12 text-center">
           <Button asChild>
-            <Link href="#contact">לתיאום פגישה</Link>
+            <Link href="#contact">{t.services.scheduleBtn}</Link>
           </Button>
         </div>
       </div>

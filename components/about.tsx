@@ -1,25 +1,30 @@
+"use client"
+
 import { Building, UserCheck, Clock, Award } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function About() {
+  const { t } = useLanguage()
+
   const features = [
     {
-      title: "מקצועיות",
-      description: "צוות מומחים בתחומי הנדל״ן, המשפט והפיננסים",
+      title: t.about.features.professionalism.title,
+      description: t.about.features.professionalism.description,
       icon: Award,
     },
     {
-      title: "אמינות",
-      description: "עבודה שקופה והוגנת עם כל לקוח",
+      title: t.about.features.reliability.title,
+      description: t.about.features.reliability.description,
       icon: UserCheck,
     },
     {
-      title: "זמינות",
-      description: "ליווי אישי ומענה מהיר לאורך כל הדרך",
+      title: t.about.features.availability.title,
+      description: t.about.features.availability.description,
       icon: Clock,
     },
     {
-      title: "ניסיון",
-      description: "שנים של ניסיון בליווי עסקאות מגוונות",
+      title: t.about.features.experience.title,
+      description: t.about.features.experience.description,
       icon: Building,
     },
   ]
@@ -28,18 +33,12 @@ export default function About() {
     <section id="about" className="py-16 md:py-24 bg-white">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">אודות בית לוי</h2>
-          <p className="text-lg text-muted-foreground">
-            "בית לוי שמאות ופיננסים" הוקמה במטרה לספק ללקוחותיה את כל מעטפת השירותים הנחוצים בעולם הנדל"ן – תחת גג אחד.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">{t.about.title}</h2>
+          <p className="text-lg text-muted-foreground">{t.about.subtitle}</p>
         </div>
 
         <div className="bg-gray-50 p-6 md:p-8 rounded-xl">
-          <p className="text-gray-700 mb-6">
-            אנו מתמחים בליווי משפטי לעסקאות נדל"ן, ייעוץ משכנתאות, שמאות מקרקעין וליווי נכסי נדל"ן מכל הסוגים. החברה
-            פועלת בפרויקטים פרטיים, עסקיים וציבוריים – קטנים כגדולים – בכל רחבי הארץ, מתוך מחויבות לערכים של אמינות,
-            מקצועיות, זמינות גבוהה ושירות אישי מדויק.
-          </p>
+          <p className="text-gray-700 mb-6">{t.about.description}</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             {features.map((feature, index) => (

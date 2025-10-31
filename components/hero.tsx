@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeftIcon, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState, useEffect } from "react"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Hero() {
+  const { t } = useLanguage()
+
   // Images for the carousel - removed placeholder images
   const carouselImages = [
     "/modern-apartment-building.png",
@@ -80,30 +83,24 @@ export default function Hero() {
           <div className="order-2 lg:order-1 flex flex-col gap-6">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-4 leading-tight">
-                כל פתרונות הנדל״ן והפיננסים במקום אחד
+                {t.hero.title}
               </h1>
-              <h2 className="text-lg md:text-xl text-muted-foreground">
-                ליווי משפטי, ייעוץ משכנתאות, שמאות מקרקעין וניהול נכסי נדל״ן בפריסה ארצית
-              </h2>
+              <h2 className="text-lg md:text-xl text-muted-foreground">{t.hero.subtitle}</h2>
             </div>
 
             <div className="bg-white/70 backdrop-blur-sm p-5 rounded-lg border border-gray-100 shadow-sm">
-              <p className="text-gray-700">
-                ברוכים הבאים ל״לוי פיננסים״ – החברה שנותנת לך שקט וביטחון בכל עסקת נדל״ן. אנו מלווים לקוחות פרטיים,
-                עסקים, חברות ויזמים לאורך כל שלבי העסקה – מהבדיקות המקדימות, דרך המימון ועד לסיום הבירוקרטיה – תחת קורת
-                גג אחת.
-              </p>
+              <p className="text-gray-700">{t.hero.welcome}</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <Button size="lg" className="text-base">
                 <Link href="#contact" className="flex items-center gap-2">
-                  לתיאום פגישה ראשונית
+                  {t.hero.scheduleBtn}
                   <ArrowLeftIcon className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="text-base">
-                <Link href="#services">לשירותים שלנו</Link>
+              <Button size="lg" variant="outline" className="text-base bg-transparent">
+                <Link href="#services">{t.hero.servicesBtn}</Link>
               </Button>
             </div>
           </div>
@@ -157,7 +154,7 @@ export default function Hero() {
               </button>
             </div>
             <div className="gold-gradient p-5 rounded-lg shadow-lg sm:absolute sm:-bottom-12 sm:-left-6 mt-4 sm:mt-0">
-              <p className="text-navy font-bold text-lg">אמינות. מקצועיות. ליווי אישי.</p>
+              <p className="text-navy font-bold text-lg">{t.hero.tagline}</p>
             </div>
           </div>
         </div>
