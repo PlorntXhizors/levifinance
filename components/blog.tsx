@@ -1,10 +1,15 @@
+"use client"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, User, ArrowLeft, Clock } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Blog() {
+  const { t } = useLanguage()
+
   const articles = [
     {
       id: 1,
@@ -14,7 +19,7 @@ export default function Blog() {
       image: "/real-estate-growth-chart.png",
       author: "נופר לוי",
       date: "15 בינואר 2025",
-      readTime: "5 דקות קריאה",
+      readTime: "5",
       category: "השקעות",
     },
     {
@@ -25,7 +30,7 @@ export default function Blog() {
       image: "/real-estate-contract-signing.png",
       author: "נופר לוי",
       date: "8 בינואר 2025",
-      readTime: "7 דקות קריאה",
+      readTime: "7",
       category: "משכנתאות",
     },
     {
@@ -36,53 +41,19 @@ export default function Blog() {
       image: "/financial-advisor-meeting.png",
       author: "נופר לוי",
       date: "2 בינואר 2025",
-      readTime: "6 דקות קריאה",
+      readTime: "6",
       category: "ליווי משפטי",
-    },
-    {
-      id: 4,
-      title: "3 דברים שחייבים לבדוק לפני שקונים דירה להשקעה",
-      excerpt:
-        "בדיקות קריטיות שיכולות להבדיל בין השקעה מוצלחת לכישלון יקר. מדריך מקיף לבדיקות הכרחיות לפני רכישת נכס להשקעה.",
-      image: "/placeholder.svg?height=400&width=800&text=Investment+Property+Checklist",
-      author: "נופר לוי",
-      date: "25 בדצמבר 2024",
-      readTime: "8 דקות קריאה",
-      category: "השקעות",
-    },
-    {
-      id: 5,
-      title: "איך לנהל עסקת נדל״ן בראש של שמאי/ת מקרקעין",
-      excerpt:
-        "גישה מקצועית לניהול עסקאות נדל״ן מנקודת המבט של שמאי מקרקעין. כלים וטכניקות להערכה נכונה ולקבלת החלטות מושכלות.",
-      image: "/placeholder.svg?height=400&width=800&text=Real+Estate+Appraiser+Mindset",
-      author: "נופר לוי",
-      date: "18 בדצמבר 2024",
-      readTime: "9 דקות קריאה",
-      category: "שמאות מקרקעין",
-    },
-    {
-      id: 6,
-      title: "מה נותן יתרון לעשות שמאות מוקדמת לנכס לפני רכישה",
-      excerpt:
-        "היתרונות המשמעותיים של ביצוע הערכת שווי מקצועית לפני רכישת נכס. כיצד שמאות מוקדמת יכולה לחסוך כסף ולמנוע טעויות יקרות.",
-      image: "/placeholder.svg?height=400&width=800&text=Pre-Purchase+Property+Appraisal",
-      author: "נופר לוי",
-      date: "10 בדצמבר 2024",
-      readTime: "7 דקות קריאה",
-      category: "שמאות מקרקעין",
     },
   ]
 
-  // Display only the first 3 articles in the homepage section
   const displayedArticles = articles.slice(0, 3)
 
   return (
     <section id="blog" className="py-16 md:py-24 bg-gray-50">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">המדריכים שלנו</h2>
-          <p className="text-lg text-muted-foreground">מאמרים ומדריכים מקצועיים בתחומי הנדל״ן, המשכנתאות והשמאות</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">{t.blog.title}</h2>
+          <p className="text-lg text-muted-foreground">{t.blog.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -113,7 +84,9 @@ export default function Blog() {
                   </div>
                   <div className="flex items-center gap-1">
                     <Clock className="h-4 w-4" />
-                    <span>{article.readTime}</span>
+                    <span>
+                      {article.readTime} {t.blog.readTime}
+                    </span>
                   </div>
                 </div>
                 <CardTitle className="text-xl text-navy leading-tight hover:text-accent transition-colors">
@@ -132,7 +105,7 @@ export default function Blog() {
 
                   <Button variant="ghost" size="sm" className="group/btn" asChild>
                     <Link href={`/blog/${article.id}`}>
-                      <span>קרא עוד</span>
+                      <span>{t.blog.readMore}</span>
                       <ArrowLeft className="h-4 w-4 mr-1 group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
@@ -145,7 +118,7 @@ export default function Blog() {
         <div className="mt-12 text-center">
           <Button variant="outline" size="lg" asChild>
             <Link href="/blog">
-              צפה בכל המאמרים
+              {t.blog.viewAll}
               <ArrowLeft className="h-4 w-4 mr-2" />
             </Link>
           </Button>

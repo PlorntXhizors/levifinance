@@ -27,7 +27,7 @@ export const translations = {
       description:
         '"בית לוי שמאות ופיננסים" הוקמה במטרה לספק ללקוחותיה את כל מעטפת השירותים הנחוצים בעולם הנדל"ן – תחת גג אחד.',
       fullDescription:
-        'אנו מתמחים בליווי משפטי לעסקאות נדל"ן, ייעוץ משכנתאות, שמאות מקרקעין וליווי נכסי נדל"ן מכל הסוגים. החברה פועלת בפרויקטים פרטיים, עסקיים וציבוריים – קטנים כגדולים – בכל רחבי הארץ, מתוך מחויבות לערכים של אמינות, מקצועיות, זמינות גבוהה ושירות אישי מדויק.',
+        'אנו מתמחים בליווי משפטי לעסקאות נדל"ן, ייעוץ משכנתאות, שמאות מקרקעין וניהול נכסי נדל"ן מכל הסוגים. החברה פועלת בפרויקטים פרטיים, עסקיים וציבוריים – קטנים כגדולים – בכל רחבי הארץ, מתוך מחויבות לערכים של אמינות, מקצועיות, זמינות גבוהה ושירות אישי מדויק.',
       features: {
         professionalism: {
           title: "מקצועיות",
@@ -57,7 +57,7 @@ export const translations = {
         title: "ייעוץ משכנתאות",
         description:
           "בחירה נכונה במשכנתא יכולה לחסוך לכם מאות אלפי שקלים. אנחנו נבנה עבורכם תמהיל חכם, ננהל מו״מ עם הבנקים – ואתם תיהנו מראש שקט.",
-        features: ["תמהיל משכנתא מותאם אישית", "ניהול מו״מ עם הבנקים", "חיסכון של עשרות אלפי שקלים"],
+        features: ["תמהיל משכנתא מותאם אישית", "ניהל מו״מ עם הבנקים", "חיסכון של עשרות אלפי שקלים"],
       },
       appraisal: {
         title: "שמאות מקרקעין",
@@ -72,27 +72,75 @@ export const translations = {
         features: ["ניסוח ובדיקת הסכמי מכר", "טיפול בהיבטי מיסוי", "רישום בטאבו"],
       },
       management: {
-        title: "ליווי נכסי נדל״ן",
+        title: "ניהול נכסי נדל״ן",
         description:
-          "מהשקעה בדירה ועד ניהול פרויקטים – אנו מציעים ליווי מקצועי למשקיעים, חברות ויזמים, כולל ניתוח כדאיות, בדיקות זכויות, תכנון וניהול.",
-        features: ["ניתוחים כלכליים", "תכנון אסטרטגי", "בדיקות שמאיות מקדימות"],
-      },
-      urbanRenewal: {
-        title: "התחדשות עירונית",
-        description:
-          "משרדנו מתמחה בהתחדשות עירונית – תהליך המחדש ומשפר אזורים עירוניים קיימים. אנו מלווים דיירים ויזמים בפרויקטי פינוי-בינוי, תמ״א 38 ותכניות התחדשות נוספות.",
-        features: ["ליווי פרויקטי תמ״א 38", "ייעוץ משפטי לפינוי-בינוי", "הערכת זכויות ושווי"],
+          "מהשקעה בדירה ועד ניהול פרויקטים – אנו מציעים ליווי מקצועי למשקיעים, חברות ויזמים, כולל ניתוח וניהול נכסים.",
+        features: ["ניהול נכסים"], // Removed the duplicate "serviceName": "ניהול נכסים"
       },
     },
     // Team
     team: {
       title: "הצוות שלנו",
-      subtitle: 'צוות מומחים מנוסה ומקצועי שמביא איתו שנים של ניסיון בתחומי הנדל"ן, המשפט והפיננסים',
+      subtitle: "צוות מומחים מנוסה ומקצועי שמביא איתו שנים של ניסיון בתחומי הנדל״ן, המשפט והפיננסים",
       specialties: "התמחויות",
       education: "השכלה",
       email: "אימייל",
       phone: "טלפון",
       contact: "צרו קשר עם הצוות",
+      members: [
+        {
+          name: "נופר לוי",
+          title: "מייסדת ומנכלית",
+          description: 'בעלת תואר ראשון במשפטים, תואר שני במשפטים, תואר שני במנהל עסקים שמאות מקרקעין וניהול נדל"ן',
+          specialties: ['דיני נדל"ן', "עסקאות מקרקעין", "ליווי משפטי"],
+          education: "תואר ראשון LL.B, תואר שני LL.M, תואר שני M.B.A",
+        },
+        {
+          name: "קובי לוי",
+          title: 'מנהל פרויקטים ומתווך עסקאות נדל"ן',
+          description:
+            'מתווך נדל"ן מוסמך ומנהל פרויקטים מנוסה המתמחה בליווי עסקאות נדל"ן מורכבות וניהול פרויקטי בנייה.',
+          specialties: ['תיווך נדל"ן', "ניהול פרויקטים", "ליווי עסקאות"],
+          education: 'הכשרה לניהול פרויקטים, רישיון תיווך נדל"ן',
+        },
+        {
+          name: "לין לוי",
+          title: "שותפה ויועצת משפטית",
+          description: 'יועצת משכנתאות וכלכלנית עם נסיון עשיר בתחום וגם בליווי פרויקטים נדל"ן.',
+          specialties: ["שמאות מקרקעין", "ייעוץ משכנתאות", "ניהול פרויקטים"],
+          education: "תואר ראשון בכלכלה, רישיון שמאי מקרקעין",
+        },
+      ],
+    },
+    // Testimonials
+    testimonials: {
+      title: "המלצות לקוחות",
+      subtitle: "מה לקוחותינו אומרים על השירות שלנו",
+      items: [
+        {
+          text: "בית לוי ליוו אותי באופן מקצועי וסבלני בכל התהליך של רכישת הדירה. חסכו לי הרבה כסף בייעוץ המשכנתא והיו זמינים לכל שאלה.",
+          name: "רועי כהן",
+          role: "רכש דירה בחיפה",
+        },
+        {
+          text: "קיבלתי ליווי מעולה בעסקת מכירת נכס מסחרי. הצוות המקצועי של בית לוי ידע לתת מענה לכל סוגיה משפטית וכלכלית שצצה.",
+          name: "מיכל לוי",
+          role: "יזמית נדל״ן",
+        },
+        {
+          text: "שירות מקצועי ואדיב בשמאות הנכס שלנו. קיבלנו דו״ח מפורט ומדויק שעזר לנו מאוד בקבלת החלטות.",
+          name: "دان ישראלי",
+          role: "משקיע",
+        },
+      ],
+    },
+    // Blog
+    blog: {
+      title: "המדריכים שלנו",
+      subtitle: "מאמרים ומדריכים מקצועיים בתחומי הנדל״ן, המשכנתאות והשמאות",
+      readMore: "קרא עוד",
+      viewAll: "צפה בכל המאמרים",
+      readTime: "דקות קריאה",
     },
     // Contact
     contact: {
@@ -114,7 +162,7 @@ export const translations = {
           mortgage: "ייעוץ משכנתאות",
           appraisal: "שמאות מקרקעין",
           legal: "ליווי משפטי בעסקאות",
-          realestate: "ליווי נכסי נדל״ן",
+          realestate: "ניהול נכסי נדל״ן",
           other: "אחר",
         },
       },
@@ -123,9 +171,9 @@ export const translations = {
         phone: "טלפון",
         email: "אימייל",
         whatsapp: "וואטסאפ",
-        whatsappCta: "שלח הודעה",
+        whatsappText: "שלח הודעה",
         address: "כתובת",
-        location: "חיפה",
+        addressText: "חיפה",
       },
       hours: {
         title: "זמני פעילות",
@@ -137,34 +185,6 @@ export const translations = {
         saturdayTime: "סגור",
       },
     },
-    // Blog
-    blog: {
-      title: "המדריכים שלנו",
-      subtitle: "מאמרים ומדריכים מקצועיים בתחומי הנדל״ן, המשכנתאות והשמאות",
-      readMore: "קרא עוד",
-      viewAll: "צפה בכל המאמרים",
-      backToGuides: "חזרה למדריכים",
-      backToHome: "חזרה לדף הבית",
-      readTime: "דקות קריאה",
-    },
-    // Footer
-    footer: {
-      description: 'כל פתרונות הנדל"ן, המשכנתאות והשמאות תחת קורת גג אחת. אמינות. מקצועיות. ליווי אישי.',
-      quickLinks: "ניווט מהיר",
-      contactTitle: "צור קשר",
-      phone: "טלפון:",
-      email: "אימייל:",
-      address: "כתובת:",
-      location: "חיפה",
-      rights: "כל הזכויות שמורות.",
-      terms: "תנאי שימוש",
-      privacy: "מדיניות פרטיות",
-    },
-    // Testimonials
-    testimonials: {
-      title: "המלצות לקוחות",
-      subtitle: "מה לקוחותינו אומרים על השירות שלנו",
-    },
   },
   en: {
     // Navbar
@@ -174,123 +194,167 @@ export const translations = {
       team: "Our Team",
       services: "Our Services",
       blog: "Our Guides",
-      contact: "Contact",
-      schedule: "Schedule Meeting",
+      contact: "Contact Us",
+      schedule: "Schedule a Meeting",
       menu: "Menu",
     },
     // Hero
     hero: {
       title: "All Real Estate and Finance Solutions in One Place",
-      subtitle: "Legal support, mortgage consulting, real estate appraisal, and property management nationwide",
+      subtitle: "Legal advice, mortgage advice, property valuations, and real estate asset management nationwide",
       description:
-        "Welcome to Levi Finance – the company that gives you peace of mind in every real estate transaction. We accompany private clients, businesses, companies, and entrepreneurs throughout all stages of the transaction – from preliminary checks, through financing, to the end of bureaucracy – all under one roof.",
-      cta1: "Schedule Initial Consultation",
+        "Welcome to 'Levi Finance' – the company that gives you peace and security in every real estate transaction. We accompany private clients, businesses, companies, and partnerships throughout all stages of the transaction – from preliminary inspections, through financing to the end of bureaucracy – under one roof.",
+      cta1: "Schedule a First Meeting",
       cta2: "Our Services",
-      tagline: "Reliability. Professionalism. Personal Support.",
+      tagline: "Trustworthiness. Professionalism. Personal Guidance.",
     },
     // About
     about: {
-      title: "About Beit Levi",
+      title: "About Levi House",
       description:
-        '"Beit Levi Appraisal and Finance" was established to provide clients with all the necessary services in the real estate world – under one roof.',
+        '"Levi House Valuations and Finance" was established to provide our clients with all the necessary services in the real estate world – under one roof.',
       fullDescription:
-        "We specialize in legal support for real estate transactions, mortgage consulting, real estate appraisal, and management of all types of real estate properties. The company operates in private, commercial, and public projects – small and large – throughout the country, with a commitment to values of reliability, professionalism, high availability, and accurate personal service.",
+        "We specialize in legal accompaniment for real estate transactions, mortgage advice, property valuations, and asset management in all types of real estate. The company operates in private, business, and public projects – small and large – throughout the country, out of a commitment to values of trustworthiness, professionalism, high availability, and precise personal service.",
       features: {
         professionalism: {
           title: "Professionalism",
-          description: "Team of experts in real estate, law, and finance",
+          description: "A team of experts in real estate, law, and finance",
         },
         reliability: {
-          title: "Reliability",
+          title: "Trustworthiness",
           description: "Transparent and fair work with every client",
         },
         availability: {
           title: "Availability",
-          description: "Personal support and quick response throughout",
+          description: "Personal guidance and quick response throughout the process",
         },
         experience: {
           title: "Experience",
-          description: "Years of experience in diverse transactions",
+          description: "Years of experience in accompanying various transactions",
         },
       },
     },
     // Services
     services: {
       title: "Our Services",
-      subtitle: "Professional services. Accurate results.",
-      cta: "Get Initial Consultation",
-      schedule: "Schedule Meeting",
+      subtitle: "Professional services. Precise results.",
+      cta: "Get Initial Advice",
+      schedule: "Schedule a Meeting",
       mortgage: {
-        title: "Mortgage Consulting",
+        title: "Mortgage Advice",
         description:
-          "The right mortgage choice can save you hundreds of thousands of shekels. We'll build a smart portfolio for you, negotiate with banks – and you'll enjoy peace of mind.",
-        features: [
-          "Personalized mortgage portfolio",
-          "Negotiation with banks",
-          "Savings of tens of thousands of shekels",
-        ],
+          "Choosing the right mortgage can save you hundreds of thousands of shekels. We will build a smart mortgage for you, manage your mortgage with banks – and you will enjoy peace of mind in advance.",
+        features: ["Personalized mortgage plan", "Manage mortgage with banks", "Save tens of thousands of shekels"],
       },
       appraisal: {
-        title: "Real Estate Appraisal",
+        title: "Property Valuations",
         description:
-          "Professional and accurate appraisal report – the key to a safe transaction. With extensive experience and deep familiarity with the field, we're here to truly evaluate the property.",
-        features: ["Reliable valuations", "Expert opinions for court", "Rights and plans verification"],
+          "Professional and precise property valuation report – the key to a safe transaction. With extensive experience and deep knowledge of the area, we are here to truly value your property.",
+        features: ["Trustworthy property valuations", "Legal opinion", "Rights checks and plans"],
       },
       legal: {
-        title: "Legal Support for Real Estate Transactions",
+        title: "Legal Accompaniment in Real Estate Transactions",
         description:
-          "Buying or selling an apartment? In a transaction with a developer? We'll handle all legal aspects – contracts, checks, registration, taxation, and more.",
-        features: ["Drafting and reviewing sale agreements", "Handling tax aspects", "Land registry registration"],
+          "Buying or selling a house? A transaction with a partnership? We will take care of all legal aspects – contracts, inspections, registration, taxes, and more.",
+        features: [
+          "Drafting and reviewing sales contracts",
+          "Handling tax issues",
+          "Registration in the Land Registry",
+        ],
       },
       management: {
-        title: "Real Estate Property Management",
+        title: "Real Estate Asset Management",
         description:
-          "From apartment investment to project management – we offer professional support for investors, companies, and entrepreneurs, including feasibility analysis, rights verification, planning, and management.",
-        features: ["Economic analyses", "Strategic planning", "Preliminary appraisal checks"],
-      },
-      urbanRenewal: {
-        title: "Urban Renewal",
-        description:
-          "Our office specializes in urban renewal – a process that renews and improves existing urban areas. We accompany residents and entrepreneurs in evacuation-construction projects, TAMA 38, and other renewal programs.",
-        features: [
-          "TAMA 38 project support",
-          "Legal consulting for evacuation-construction",
-          "Rights and value assessment",
-        ],
+          "From investing in a house to managing projects – we offer professional accompaniment to investors, companies, and partnerships, including property analysis and management.",
+        features: ["Property management"], // Removed the duplicate "serviceName": "Property management"
       },
     },
     // Team
     team: {
       title: "Our Team",
-      subtitle:
-        "Experienced and professional team of experts bringing years of experience in real estate, law, and finance",
+      subtitle: "A professional and experienced team bringing years of expertise in real estate, law, and finance",
       specialties: "Specialties",
       education: "Education",
       email: "Email",
       phone: "Phone",
       contact: "Contact the Team",
+      members: [
+        {
+          name: "Nofar Levi",
+          title: "Founder and CEO",
+          description: "Graduate of Law, LL.M degree, M.B.A degree in Property Valuations and Real Estate Management",
+          specialties: ["Real Estate Law", "Real Estate Transactions", "Legal Accompaniment"],
+          education: "LL.B degree, LL.M degree, M.B.A degree",
+        },
+        {
+          name: "Kobi Levi",
+          title: "Project Manager and Real Estate Broker",
+          description:
+            "Certified Real Estate Broker and experienced Project Manager specializing in complex real estate transactions and construction project management.",
+          specialties: ["Real Estate Brokerage", "Project Management", "Transaction Accompaniment"],
+          education: "Project Management Training, Real Estate Broker License",
+        },
+        {
+          name: "Lin Levi",
+          title: "Partner and Legal Advisor",
+          description:
+            "Financial Advisor and Economist with extensive experience in the field as well as in real estate project management.",
+          specialties: ["Property Valuations", "Mortgage Advice", "Project Management"],
+          education: "Bachelor of Economics, Property Valuation License",
+        },
+      ],
+    },
+    // Testimonials
+    testimonials: {
+      title: "Customer Testimonials",
+      subtitle: "What our customers say about our service",
+      items: [
+        {
+          text: "Levi House accompanied me professionally and patiently throughout the process of buying a house. Their mortgage advice saved me a lot of money and they were available for every question.",
+          name: "Royi Cohen",
+          role: "Bought a house in Haifa",
+        },
+        {
+          text: "Received excellent accompaniment in the sale of a commercial property. The professional team of Levi House knew how to provide an answer to every legal and economic issue that arose.",
+          name: "Michal Levi",
+          role: "Real Estate Partnership",
+        },
+        {
+          text: "Professional and thoughtful service in the valuation of our property. We received a detailed and accurate report that helped us a lot in making decisions.",
+          name: "Dan Israeli",
+          role: "Investor",
+        },
+      ],
+    },
+    // Blog
+    blog: {
+      title: "Our Guides",
+      subtitle: "Professional articles and guides in the fields of real estate, mortgages, and valuations",
+      readMore: "Read More",
+      viewAll: "View All Articles",
+      readTime: "Minutes to Read",
     },
     // Contact
     contact: {
       title: "Contact Us",
-      subtitle: "Interested in initial consultation? Leave your details and we'll get back to you soon",
+      subtitle: "Interested in getting initial advice? Leave your details and we will get back to you soon.",
       form: {
         name: "Full Name",
         namePlaceholder: "Enter your full name",
         phone: "Phone",
-        phonePlaceholder: "Enter phone number",
+        phonePlaceholder: "Enter your phone number",
         email: "Email",
-        emailPlaceholder: "Enter email address",
+        emailPlaceholder: "Enter your email address",
         service: "Area of Interest",
-        servicePlaceholder: "Select area",
+        servicePlaceholder: "Choose a field",
         message: "Message (Optional)",
         messagePlaceholder: "Write your message here...",
-        submit: "Send Details",
+        submit: "Submit Details",
         services: {
-          mortgage: "Mortgage Consulting",
-          appraisal: "Real Estate Appraisal",
-          legal: "Legal Support for Transactions",
-          realestate: "Real Estate Property Management",
+          mortgage: "Mortgage Advice",
+          appraisal: "Property Valuations",
+          legal: "Legal Accompaniment",
+          realestate: "Real Estate Asset Management",
           other: "Other",
         },
       },
@@ -299,51 +363,19 @@ export const translations = {
         phone: "Phone",
         email: "Email",
         whatsapp: "WhatsApp",
-        whatsappCta: "Send Message",
+        whatsappText: "Send Message",
         address: "Address",
-        location: "Haifa",
+        addressText: "Haifa",
       },
       hours: {
-        title: "Business Hours",
-        weekdays: "Sunday - Thursday:",
-        weekdaysTime: "9:00 AM - 6:00 PM",
-        friday: "Friday:",
-        fridayTime: "9:00 AM - 1:00 PM",
-        saturday: "Saturday:",
+        title: "Operating Hours",
+        weekdays: "Monday - Friday:",
+        weekdaysTime: "9:00 - 18:00",
+        friday: "Saturday:",
+        fridayTime: "9:00 - 13:00",
+        saturday: "Sunday:",
         saturdayTime: "Closed",
       },
     },
-    // Blog
-    blog: {
-      title: "Our Guides",
-      subtitle: "Professional articles and guides in real estate, mortgages, and appraisal",
-      readMore: "Read More",
-      viewAll: "View All Articles",
-      backToGuides: "Back to Guides",
-      backToHome: "Back to Home",
-      readTime: "min read",
-    },
-    // Footer
-    footer: {
-      description:
-        "All real estate, mortgage, and appraisal solutions under one roof. Reliability. Professionalism. Personal Support.",
-      quickLinks: "Quick Links",
-      contactTitle: "Contact",
-      phone: "Phone:",
-      email: "Email:",
-      address: "Address:",
-      location: "Haifa",
-      rights: "All rights reserved.",
-      terms: "Terms of Use",
-      privacy: "Privacy Policy",
-    },
-    // Testimonials
-    testimonials: {
-      title: "Client Testimonials",
-      subtitle: "What our clients say about our service",
-    },
   },
 }
-
-export type Language = keyof typeof translations
-export type TranslationKey = typeof translations.he

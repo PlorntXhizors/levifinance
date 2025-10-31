@@ -8,8 +8,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useForm } from "react-hook-form"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Phone, Mail, MessageCircle, MapPin } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function ContactSection() {
+  const { t } = useLanguage()
+
   const form = useForm({
     defaultValues: {
       name: "",
@@ -40,24 +43,38 @@ export default function ContactSection() {
     }
 
     console.log(values)
-    // Here you would normally send the form data to your backend
     alert("הפרטים נשלחו בהצלחה! נחזור אליך בהקדם.")
     form.reset()
   }
 
   const contactInfo = [
-    { icon: Phone, title: "טלפון", value: "055-649-296", href: "tel:055649296" },
-    { icon: Mail, title: "אימייל", value: "nofarlevi2603@gmail.com", href: "mailto:nofarlevi2603@gmail.com" },
-    { icon: MessageCircle, title: "וואטסאפ", value: "שלח הודעה", href: "https://wa.me/972556492960" },
-    { icon: MapPin, title: "כתובת", value: "חיפה", href: "https://maps.google.com/?q=Haifa,Israel" },
+    { icon: Phone, title: t.contact.info.phone, value: "055-649-296", href: "tel:055649296" },
+    {
+      icon: Mail,
+      title: t.contact.info.email,
+      value: "nofarlevi2603@gmail.com",
+      href: "mailto:nofarlevi2603@gmail.com",
+    },
+    {
+      icon: MessageCircle,
+      title: t.contact.info.whatsapp,
+      value: t.contact.info.whatsappCta,
+      href: "https://wa.me/972556492960",
+    },
+    {
+      icon: MapPin,
+      title: t.contact.info.address,
+      value: t.contact.info.location,
+      href: "https://maps.google.com/?q=Haifa,Israel",
+    },
   ]
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-gray-50">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">צור קשר</h2>
-          <p className="text-lg text-muted-foreground">מעוניינים לקבל ייעוץ ראשוני? השאירו פרטים ונחזור אליכם בהקדם</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">{t.contact.title}</h2>
+          <p className="text-lg text-muted-foreground">{t.contact.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
@@ -71,9 +88,9 @@ export default function ContactSection() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>שם מלא</FormLabel>
+                          <FormLabel>{t.contact.form.name}</FormLabel>
                           <FormControl>
-                            <Input placeholder="הכנס את שמך המלא" {...field} />
+                            <Input placeholder={t.contact.form.namePlaceholder} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -85,9 +102,9 @@ export default function ContactSection() {
                       name="phone"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>טלפון</FormLabel>
+                          <FormLabel>{t.contact.form.phone}</FormLabel>
                           <FormControl>
-                            <Input placeholder="הכנס את מספר הטלפון" {...field} />
+                            <Input placeholder={t.contact.form.phonePlaceholder} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -101,9 +118,9 @@ export default function ContactSection() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>אימייל</FormLabel>
+                          <FormLabel>{t.contact.form.email}</FormLabel>
                           <FormControl>
-                            <Input placeholder="הכנס את כתובת האימייל" {...field} />
+                            <Input placeholder={t.contact.form.emailPlaceholder} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -115,19 +132,19 @@ export default function ContactSection() {
                       name="service"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>תחום עניין</FormLabel>
+                          <FormLabel>{t.contact.form.service}</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
                               <SelectTrigger>
-                                <SelectValue placeholder="בחר תחום" />
+                                <SelectValue placeholder={t.contact.form.servicePlaceholder} />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="mortgage">ייעוץ משכנתאות</SelectItem>
-                              <SelectItem value="appraisal">שמאות מקרקעין</SelectItem>
-                              <SelectItem value="legal">ליווי משפטי בעסקאות</SelectItem>
-                              <SelectItem value="realestate">ליווי נכסי נדל״ן</SelectItem>
-                              <SelectItem value="other">אחר</SelectItem>
+                              <SelectItem value="mortgage">{t.contact.form.services.mortgage}</SelectItem>
+                              <SelectItem value="appraisal">{t.contact.form.services.appraisal}</SelectItem>
+                              <SelectItem value="legal">{t.contact.form.services.legal}</SelectItem>
+                              <SelectItem value="realestate">{t.contact.form.services.realestate}</SelectItem>
+                              <SelectItem value="other">{t.contact.form.services.other}</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
@@ -141,9 +158,14 @@ export default function ContactSection() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>הודעה (אופציונלי)</FormLabel>
+                        <FormLabel>{t.contact.form.message}</FormLabel>
                         <FormControl>
-                          <Textarea placeholder="כתוב את הודעתך כאן..." className="resize-none" rows={4} {...field} />
+                          <Textarea
+                            placeholder={t.contact.form.messagePlaceholder}
+                            className="resize-none"
+                            rows={4}
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -151,7 +173,7 @@ export default function ContactSection() {
                   />
 
                   <Button type="submit" className="w-full">
-                    שלח פרטים
+                    {t.contact.form.submit}
                   </Button>
                 </form>
               </Form>
@@ -161,7 +183,7 @@ export default function ContactSection() {
           <div className="lg:col-span-2 space-y-6">
             <Card className="border-gray-200">
               <CardContent className="pt-6">
-                <h3 className="text-xl font-bold text-navy mb-4">דרכי התקשרות</h3>
+                <h3 className="text-xl font-bold text-navy mb-4">{t.contact.info.title}</h3>
                 <div className="space-y-4">
                   {contactInfo.map((item, index) => (
                     <a
@@ -186,19 +208,19 @@ export default function ContactSection() {
 
             <Card className="border-gray-200">
               <CardContent className="pt-6">
-                <h3 className="text-xl font-bold text-navy mb-4">זמני פעילות</h3>
+                <h3 className="text-xl font-bold text-navy mb-4">{t.contact.hours.title}</h3>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">ראשון - חמישי:</span>
-                    <span>9:00 - 18:00</span>
+                    <span className="text-muted-foreground">{t.contact.hours.weekdays}</span>
+                    <span>{t.contact.hours.weekdaysTime}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">שישי:</span>
-                    <span>9:00 - 13:00</span>
+                    <span className="text-muted-foreground">{t.contact.hours.friday}</span>
+                    <span>{t.contact.hours.fridayTime}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">שבת:</span>
-                    <span>סגור</span>
+                    <span className="text-muted-foreground">{t.contact.hours.saturday}</span>
+                    <span>{t.contact.hours.saturdayTime}</span>
                   </div>
                 </div>
               </CardContent>
