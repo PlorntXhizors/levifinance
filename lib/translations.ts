@@ -126,7 +126,7 @@ export const translations = {
       subtitle: "מה לקוחותינו אומרים על השירות שלנו",
       items: [
         {
-          text: "בית לוי ליוו אותי באופן מקצועי וסבלני בכל התהליך של רכישת הדירה. חסכו לי הרבה כסף בייעוץ המשכנתא והיו זמינים לכל שאלה.",
+          text: "בית לוי ליוו אותי באופן מקצועי וסבלני בכל התהליך של רכישת הדירה. חסכו לי הרבה כסף בייעוץ המשכנתא והיו זמינו לכל שאלה.",
           name: "רועי כהן",
           role: "רכש דירה בחיפה",
         },
@@ -189,7 +189,7 @@ export const translations = {
                 "בדיקת ועד הבית - גובה האגרות והחובות הקיימים",
               ],
               reminder:
-                "השקעה בנדל״ן היא השקעה ארוכת טווח. התאזרו בסבלנות ואל תצפו לתשואות מיידיות. השוק הנדל״ן עובר מחזורים, והמפתח להצלחה הוא בחירה נכונה וסבלנות.",
+                "השקעה בנדל״ן היא השקעה ארוכת טווח. התאזרו בסבלנות ואל תצפו לתשואות מיידיות. השוק הנדל״ן עובר מחזורים, וה מפתח להצלחה הוא בחירה נכונה וסבלנות.",
             },
           },
           summary:
@@ -260,6 +260,21 @@ export const translations = {
         saturday: "שבת:",
         saturdayTime: "סגור",
       },
+    },
+    // Footer
+    footer: {
+      companyName: "בית לוי",
+      companyTagline: "שמאות ופיננסים",
+      description: 'כל פתרונות הנדל"ן, המשכנתאות והשמאות תחת קורת גג אחת. אמינות. מקצועיות. ליווי אישי.',
+      quickNav: "ניווט מהיר",
+      contactTitle: "צור קשר",
+      phone: "טלפון",
+      email: "אימייל",
+      address: "כתובת",
+      addressText: "חיפה",
+      copyright: "בית לוי שמאות ופיננסים. כל הזכויות שמורות.",
+      terms: "תנאי שימוש",
+      privacy: "מדיניות פרטיות",
     },
   },
   en: {
@@ -534,6 +549,22 @@ export const translations = {
         saturday: "Sunday:",
         saturdayTime: "Closed",
       },
+    },
+    // Footer
+    footer: {
+      companyName: "Levi House",
+      companyTagline: "Valuations and Finance",
+      description:
+        "All real estate, mortgage, and valuation solutions under one roof. Trustworthiness. Professionalism. Personal Guidance.",
+      quickNav: "Quick Navigation",
+      contactTitle: "Contact Us",
+      phone: "Phone",
+      email: "Email",
+      address: "Address",
+      addressText: "Haifa",
+      copyright: "Levi House Valuations and Finance. All rights reserved.",
+      terms: "Terms of Use",
+      privacy: "Privacy Policy",
     },
   },
 }
